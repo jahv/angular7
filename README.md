@@ -9,4 +9,9 @@
     > then run:
 
     > **npm audit fix --force**
-- 
+    
+## Adding bootstrap (or other libraries)
+
+ 
+- npm install --save bootstrap : Adding bootstrap to the project
+- Update `angular.json` to add the dependency 
