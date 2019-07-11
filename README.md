@@ -21,7 +21,7 @@ css, html, spec.ts and ts files with a template ready to use and update the `app
  
  ## Components
  
- - Need the decorator `@Component`
+ - Need the decorator `@Component` passing a JS object for configuring
  - Need a HTML template (inline or external)
  - Need a unique selector
  - Ways to reference a component:
