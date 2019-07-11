@@ -33,7 +33,9 @@ css, html, spec.ts and ts files with a template ready to use and update the `app
 
 ![image](imgs/DataBinding.png)
 
-* String Interpolation: We can use anything that resolves as a string
+- String Interpolation: We can use anything that resolves as a string
   * {{ variable }}
   * {{ 'STRING' }}
   * {{ method() }} //Must return a string
+- Property Binding: Used to change DOM Elements properties, usage: <element `[`propertyToChange`]` = "varToBindiningInTSFile" >, 
+note the `propertyToChange` must be enclosed within `[]`
