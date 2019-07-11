@@ -1,6 +1,6 @@
 # angular7
 
-## Commands
+## NG CLI Commands
 
 - ng new [name] :  Creates new app
 - ng serve : Run a server on ort 4200 which runs the code, if errors about:
@@ -10,8 +10,15 @@
 
     > **npm audit fix --force**
     
+- ng generate component [component-name] : Creates a new component, creates the directpry inside src/app, creates the 
+css, html, spec.ts and ts files with a template ready to use and update the `app.module.ts` to include the new component
+    > ng g c [component-name] : shortcut
+    
 ## Adding bootstrap (or other libraries)
 
  
 - npm install --save bootstrap : Adding bootstrap to the project
-- Update `angular.json` to add the dependency 
+- Update `angular.json` to add the dependency
+ 
+
+
