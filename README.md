@@ -42,3 +42,16 @@ note the `propertyToChange` must be enclosed within `[]`
 - Event Binding: Used to react to events, usage: <element `(`eventName`)` = "codeToExecute or Function" >, 
 note the `eventName` must be enclosed within `()`
 - 2-way-Binding: Use `[(ngModel)]` to configure the 2-way-binding, usage: <input `[(ngModel)]="varToPoint"`>
+
+## Directives
+
+- They are instructions on the DOM
+- Don't need template
+- Tipically use the `attribute` style `[]`
+- Use the `@Directive` decorator
+
+### Existing Directives
+
+- *ngIf : Receives any code that resolves as a boolean, usage: <p `*ngIf="true"`>Show</p>
+
+_Notes: The `*` means is structural directive changing the DOM_
