@@ -53,5 +53,8 @@ note the `eventName` must be enclosed within `()`
 ### Existing Directives
 
 - *ngIf : Receives any code that resolves as a boolean, usage: <p `*ngIf="true"`>Show</p>
+- Else : For using else we need to add a marker in the DOM enclosing what we want in the else, and add `else markerInDomName` '
+after the `*ngIf` condition, usage: `<p *ngIf="serverCreated; else noServer">IF CODE</p>
+    <ng-template #noServer>ELSE CODE</ng-template>`
 
 _Notes: The `*` means is structural directive changing the DOM_
