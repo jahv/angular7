@@ -56,5 +56,6 @@ note the `eventName` must be enclosed within `()`
 - Else : For using else we need to add a marker in the DOM enclosing what we want in the else, and add `else markerInDomName` '
 after the `*ngIf` condition, usage: `<p *ngIf="serverCreated; else noServer">IF CODE</p>
     <ng-template #noServer>ELSE CODE</ng-template>`
+- ngStyle : used binding to a property so use it within `[]`, ie: `<p [ngStyle]="{backgroundColor: getColor()}"></p>`
 
 _Notes: The `*` means is structural directive changing the DOM_
