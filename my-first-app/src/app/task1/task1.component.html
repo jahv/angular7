@@ -3,7 +3,7 @@
 
 
 <p
-  *ngFor="let clickEvent of clickEvents"
-  [ngStyle]="{backgroundColor: clickEvent >= 5 ? 'blue' : 'transparent'}"
-  [ngClass]="{'white-text': clickEvent >= 5}"
+  *ngFor="let clickEvent of clickEvents; let i = index"
+  [ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': i >= 4}"
 >{{ clickEvent }}</p>

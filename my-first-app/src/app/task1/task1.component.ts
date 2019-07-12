@@ -22,8 +22,9 @@ export class Task1Component implements OnInit {
 
   toggleDetails() {
     this.showPassword = !this.showPassword;
-    this.counterClicks++;
-    this.clickEvents.push(this.counterClicks);
+    // this.counterClicks++;
+    // this.clickEvents.push(this.counterClicks);
+    this.clickEvents.push(new Date());
   }
 
   detailsLabel() {
