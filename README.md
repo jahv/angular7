@@ -41,3 +41,4 @@ css, html, spec.ts and ts files with a template ready to use and update the `app
 note the `propertyToChange` must be enclosed within `[]`
 - Event Binding: Used to react to events, usage: <element `(`eventName`)` = "codeToExecute or Function" >, 
 note the `eventName` must be enclosed within `()`
+- 2-way-Binding: Use `[(ngModel)]` to configure the 2-way-binding, usage: <input `[(ngModel)]="varToPoint"`>
