@@ -57,6 +57,9 @@ note the `eventName` must be enclosed within `()`
 after the `*ngIf` condition, usage: `<p *ngIf="serverCreated; else noServer">IF CODE</p>
     <ng-template #noServer>ELSE CODE</ng-template>`
 - ngStyle : used binding to a property so use it within `[]`, ie: `<p [ngStyle]="{backgroundColor: getColor()}"></p>`
-- ngClass : Also property binding `[]`, usage: `<p [ngClass]="{className: conditionForApplying the class}">` 
+- ngClass : Also property binding `[]`, usage: `<p [ngClass]="{className: conditionForApplying the class}">`
+- *ngFor :  is structural, goes inside the element we want to iterate, usage:
+`<elementToRepeat *ngFor="let tempVar of arrayToIterate"></app-server>`. For this example it repeats the Element as 
+many times as elements in the array
 
 _Notes: The `*` means is structural directive changing the DOM_
