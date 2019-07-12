@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="toggleDetails()">{{detailsLabel()}} Details</button>
+<p *ngIf="showPassword">Secret Password = {{ secretPassword }}</p>
+
+
+<p
+  *ngFor="let clickEvent of clickEvents"
+  [ngStyle]="{backgroundColor: clickEvent >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text': clickEvent >= 5}"
+>{{ clickEvent }}</p>
