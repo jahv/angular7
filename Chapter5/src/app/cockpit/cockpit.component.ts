@@ -11,15 +11,15 @@ export class CockpitComponent implements OnInit {
   serverContent = '';
 
   addServer() {
-    this.servers.push(new Server(this.serverName, this.serverContent, false));
-    this.serverName = '';
-    this.serverContent = '';
+    // this.servers.push(new Server(this.serverName, this.serverContent, false));
+    // this.serverName = '';
+    // this.serverContent = '';
   }
 
   addBluePrint() {
-    this.servers.push(new Server(this.serverName, this.serverContent, true));
-    this.serverName = '';
-    this.serverContent = '';
+    // this.servers.push(new Server(this.serverName, this.serverContent, true));
+    // this.serverName = '';
+    // this.serverContent = '';
   }
 
   constructor() { }

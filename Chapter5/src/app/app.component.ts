@@ -8,5 +8,8 @@ import {Server} from './server.model';
 })
 export class AppComponent {
 
-  servers: Server[] = [];
+  servers: Server[] = [
+    new Server('Test Server', 'Test Server', false),
+    new Server('Test Blueprint', 'Test Blueprint', true)
+  ];
 }

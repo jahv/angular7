@@ -67,3 +67,14 @@ after the `*ngIf` condition, usage: `<p *ngIf="serverCreated; else noServer">IF 
 many times as elements in the array
 
 _Notes: The `*` means is structural directive changing the DOM_
+
+## Communicating among components
+
+- From parent to son:
+  > In the parent HTML template do a property binding for the property:
+  > `<app-server-element
+    *ngFor="let server of servers"
+    [serverElement]="server" <------ THIS ONE
+    ></app-server-element>`
+  > The son component must to have a property called like that and also decorated with @Input()
+  > `@Input() serverElement: Server;`

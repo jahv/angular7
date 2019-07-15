@@ -2,7 +2,10 @@
   <app-cockpit></app-cockpit>
   <div class="row">
     <div class="col-sm-6">
-      <app-server-element *ngFor="let server of servers"></app-server-element>
+      <app-server-element
+        *ngFor="let server of servers"
+        [serverElement]="server"
+      ></app-server-element>
     </div>
   </div>
 </div>
