@@ -13,6 +13,10 @@
 - ng generate component [component-name] : Creates a new component, creates the directpry inside src/app, creates the 
 css, html, spec.ts and ts files with a template ready to use and update the `app.module.ts` to include the new component
     > ng g c [component-name] : shortcut
+    > ng g c [path]/[component-name] : Creates the component in a nested folder
+    > ng g c [component-name] --spec false : avoids creating testing files
+    
+
     
 ## Adding bootstrap (or other libraries)
  
