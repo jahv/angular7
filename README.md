@@ -94,3 +94,20 @@ _Notes: The `*` means is structural directive changing the DOM_
       this.servers.push(new Server(event.TypeToSend.propertyName)); <-- The event has a TypeToSend with the custom properties
     }` 
   
+## Local references in templates
+
+- You can add a `#` in any HTML tag to use it in the HTML template
+`<input type="text" #serverName>`
+
+- this will give us a local reference to the `<input>` element called serverName
+
+- then it can be used anywhere the HTML template:
+`<button (click)="addServer(serverName)">Add Server</button>`
+
+- In the TS code:
+`addServer(serverNameInput: HTMLInputElement) {
+  console.log(serverNameInput.value);
+}`
+
+- This local references are used only in the HTML template
+- gives the whole reference of the element, not the value 

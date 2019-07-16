@@ -7,18 +7,22 @@ import {Server} from '../server.model';
   styleUrls: ['./cockpit.component.css']
 })
 export class CockpitComponent implements OnInit {
-  serverName = '';
+  // serverName = '';
   serverContent = '';
 
   @Output('sc') serverCreated = new EventEmitter<{Server}>();
   @Output('bpc') blueprintCreated = new EventEmitter<{Server}>();
 
-  addServer() {
-    this.serverCreated.emit({Server: new Server(this.serverName, this.serverContent, false)});
+  addServer(serverNameInput: HTMLInputElement) {
+    this.serverCreated.emit(
+      {Server: new Server(serverNameInput.value, this.serverContent, false)}
+    );
   }
 
-  addBluePrint() {
-    this.blueprintCreated.emit({Server: new Server(this.serverName, this.serverContent, true)});
+  addBluePrint(serverNameInput: HTMLInputElement) {
+    this.blueprintCreated.emit(
+      {Server: new Server(serverNameInput.value, this.serverContent, true)}
+    );
   }
 
   constructor() { }
