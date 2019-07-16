@@ -111,3 +111,8 @@ _Notes: The `*` means is structural directive changing the DOM_
 
 - This local references are used only in the HTML template
 - gives the whole reference of the element, not the value 
+
+## Features
+
+- @ChildView : Allow to use html nodes from the TS file
+- <ng-content></ng-content> : Allow to pass information to the template from outside the component
