@@ -12,4 +12,12 @@ export class AppComponent {
     new Server('Test Server', 'Test Server', false),
     new Server('Test Blueprint', 'Test Blueprint', true)
   ];
+
+  addServerOnServer(event: any) {
+    this.servers.push(new Server(event.Server.serverName, event.Server.serverContent, false));
+  }
+
+  addBluePrintOnServer(event: any) {
+    this.servers.push(new Server(event.Server.serverName, event.Server.serverContent, true));
+  }
 }

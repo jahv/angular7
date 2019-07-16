@@ -78,3 +78,19 @@ _Notes: The `*` means is structural directive changing the DOM_
     ></app-server-element>`
   > The son component must to have a property called like that and also decorated with @Input()
   > `@Input() serverElement: Server;`
+- From son to parent:
+  > In the son TS file declare a property decorated with @Output() for emitting an event:
+  > `@Output() serverCreated = new EventEmitter<{TypeToSend}>();`
+  > When the son needs to send the info to the parent:
+  > `addServer() { <-- Method executed by the son
+      this.serverCreated.emit({TypeToSend: new TypeToSend(parameters...)});
+    }`
+  > In the parent HTML, where the son is used, event bind the EventEmitter from son with a methond in the parent:
+  > `  <app-cockpit <--Son used in the parent
+         (serverCreated)="addServerOnServer($event)" <-- Event binding the serverCreated object in son to addServerOnServer($event) in parent, send the $event to catch the info from son to parent
+       ></app-cockpit>` 
+  > In the parent TS file declare the method to catch the $event
+  > `addServerOnServer(event: any) { <-- Since is a custom type use any
+      this.servers.push(new Server(event.TypeToSend.propertyName)); <-- The event has a TypeToSend with the custom properties
+    }` 
+  
