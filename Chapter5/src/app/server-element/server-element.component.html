@@ -3,6 +3,7 @@
     {{serverElement.serverName}}
   </div>
   <div class="card-body" [ngClass]="{'text-danger': serverElement.isBluePrint}">
-    <p class="card-text">{{serverElement.serverContent}}</p>
+<!--    <p class="card-text">{{serverElement.serverContent}}</p>-->
+    <ng-content></ng-content>
   </div>
 </div>
