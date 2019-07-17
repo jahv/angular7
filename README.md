@@ -116,3 +116,14 @@ _Notes: The `*` means is structural directive changing the DOM_
 
 - @ChildView : Allow to use html nodes from the TS file
 - <ng-content></ng-content> : Allow to pass information to the template from outside the component
+
+## Component Lifecycle
+
+- ngOnChange: Called after a bound input property (properties decorated with @Input) changes, can be called multiple times
+- ngOnInit: Called only once when the component is initialized, run after the constructor
+- ngDoCheck: Called when change detection. When angular detects changes on the template
+- ngAfterContentInit: Called after the content of ng-content has been projected into the view
+- ngAfterContentChecked: Called every time the projected content has been checked
+- ngAfterViewInit: Called after the component's view (and child views) has been initialized
+- ngAfterViewChecked: Called every time the view (and child views) has been checked
+- ngOnDestroy: Called once when the component is about to be destroyed
