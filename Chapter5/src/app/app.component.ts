@@ -19,4 +19,8 @@ export class AppComponent {
   addBluePrintOnServer(event: any) {
     this.servers.push(new Server(event.Server.serverName, event.Server.serverContent, true));
   }
+
+  changeName() {
+    this.servers[0].serverName = 'Changed';
+  }
 }
