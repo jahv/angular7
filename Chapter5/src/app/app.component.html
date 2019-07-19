@@ -5,9 +5,11 @@
   ></app-cockpit>
   <div class="row">
     <div class="col-sm-6">
+      <button class="btn btn-success" (click)="changeName()">Change first element</button>
       <app-server-element
         *ngFor="let server of servers"
         [serverElementWithAlias]="server"
+        [name]="server.serverName"
       >
         <p class="card-text">{{server.serverContent}}</p>
       </app-server-element>
