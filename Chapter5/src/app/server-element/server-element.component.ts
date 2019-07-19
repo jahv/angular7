@@ -1,4 +1,4 @@
-import {Component, Input, OnInit, OnChanges, SimpleChanges, DoCheck} from '@angular/core';
+import {Component, Input, OnInit, OnChanges, SimpleChanges, DoCheck, AfterContentInit} from '@angular/core';
 import {Server} from '../server.model';
 
 @Component({
@@ -6,7 +6,7 @@ import {Server} from '../server.model';
   templateUrl: './server-element.component.html',
   styleUrls: ['./server-element.component.css']
 })
-export class ServerElementComponent implements OnInit, OnChanges, DoCheck {
+export class ServerElementComponent implements OnInit, OnChanges, DoCheck, AfterContentInit {
   @Input('serverElementWithAlias') serverElement: Server;
   @Input() name: string;
 
@@ -25,6 +25,10 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck {
 
   ngDoCheck(): void {
     console.log('ngDoCheck called');
+  }
+
+  ngAfterContentInit(): void {
+    console.log('ngAfterContentInit called');
   }
 
 }
