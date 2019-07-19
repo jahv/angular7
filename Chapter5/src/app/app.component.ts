@@ -23,4 +23,8 @@ export class AppComponent {
   changeName() {
     this.servers[0].serverName = 'Changed';
   }
+
+  onDestroy() {
+    this.servers.splice(0, 1);
+  }
 }

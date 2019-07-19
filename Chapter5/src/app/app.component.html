@@ -6,6 +6,7 @@
   <div class="row">
     <div class="col-sm-6">
       <button class="btn btn-success" (click)="changeName()">Change first element</button>
+      <button class="btn btn-danger" (click)="onDestroy()">Destroy first element</button>
       <app-server-element
         *ngFor="let server of servers"
         [serverElementWithAlias]="server"
