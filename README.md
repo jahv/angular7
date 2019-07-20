@@ -114,8 +114,9 @@ _Notes: The `*` means is structural directive changing the DOM_
 
 ## Features
 
-- @ChildView : Allow to use html nodes from the TS file using a local reference
+- @ChildView : Allow to use html nodes from the template inside the TS file using a local reference
 - <ng-content></ng-content> : Allow to pass information to the template from outside the component
+- @ContentChild: Allow to use html nodes from the template inside the TS file using local reference, the differences is that we can use the nodes inside the <ng-content>
 
 ## Component Lifecycle
 

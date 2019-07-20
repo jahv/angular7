@@ -6,7 +6,7 @@ import {
   SimpleChanges,
   DoCheck,
   AfterContentInit,
-  AfterContentChecked, AfterViewChecked, AfterViewInit, OnDestroy
+  AfterContentChecked, AfterViewChecked, AfterViewInit, OnDestroy, ContentChild, ElementRef, ViewChild
 } from '@angular/core';
 import {Server} from '../server.model';
 
@@ -19,6 +19,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck,
   AfterContentInit, AfterContentChecked, AfterViewChecked, AfterViewInit, OnDestroy {
   @Input('serverElementWithAlias') serverElement: Server;
   @Input() name: string;
+  @ViewChild('titleDiv') titleDiv: ElementRef;
+  @ContentChild('paragraphContent') paragraphContent: ElementRef;
 
   constructor() {
     console.log('Constructor called');
@@ -31,6 +33,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck,
 
   ngOnInit() {
     console.log('ngOnInit called');
+    console.log('titleDiv1: ' + this.titleDiv.nativeElement.textContent);
+    console.log('paragraphContent1: ' + this.paragraphContent.nativeElement.textContent);
   }
 
   ngDoCheck(): void {
@@ -39,6 +43,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck,
 
   ngAfterContentInit(): void {
     console.log('ngAfterContentInit called');
+    console.log('titleDiv2: ' + this.titleDiv.nativeElement.textContent);
+    console.log('paragraphContent2: ' + this.paragraphContent.nativeElement.textContent);
   }
 
   ngAfterContentChecked(): void {
@@ -47,6 +53,8 @@ export class ServerElementComponent implements OnInit, OnChanges, DoCheck,
 
   ngAfterViewInit(): void {
     console.log('ngAfterViewInit called');
+    console.log('titleDiv3: ' + this.titleDiv.nativeElement.textContent);
+    console.log('paragraphContent3: ' + this.paragraphContent.nativeElement.textContent);
   }
 
   ngAfterViewChecked(): void {
